@@ -1,22 +1,33 @@
 const target = document.querySelectorAll('[data-animate]')
 const target1 = document.querySelectorAll('[data-animate1]')
 const animateClass = "animate"
+const stopClass = "stop"
+
 
 function animeScroll(elements, distancia) {
     
     var windowTop = window.pageYOffset
     elements.forEach( element => {
-        element.classList.add('stop')
-        if( (windowTop + distancia) > element.offsetTop ) {
-            
-            element.classList.add(animateClass)
-        } else {
+        if (windowTop < 200) {
             element.classList.remove(animateClass)
+            element.classList.add(stopClass)
         }
+        if( (windowTop + distancia) > element.offsetTop)  {
+            element.classList.remove(stopClass)
+            element.classList.add(animateClass)
+        } 
+        
+        else {
+            element.classList.remove(animateClass)
+            element.classList.remove(stopClass)
+        }
+
     })
 }
 
 window.addEventListener("scroll", () => {
+    var windowTop = window.pageYOffset  
+    console.log(windowTop)
      animeScroll(target, 400)
      animeScroll(target1, 400)
 })

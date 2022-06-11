@@ -199,10 +199,10 @@ footer  div a {
 }
 
 
-[data-animate="left"].stop {
+[data-animate="left"] {
     transform: translate3d(-50px, 0, 0);
 }
-[data-animate="right"].stop {
+[data-animate="right"] {
     transform: translate3d(50px, 0, 0);
 }
 [data-animate].animate {
@@ -215,13 +215,21 @@ footer  div a {
     transition: 2s;
 }
 
-[data-animate1="left"].stop {
+[data-animate1="left"] {
     transform: translate3d(-50px, 0, 0);
 }
-[data-animate1="right"].stop {
+[data-animate1="right"] {
     transform: translate3d(50px, 0, 0);
 }
 [data-animate1].animate {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+[data-animate].stop {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+[data-animate1].stop {
     opacity: 1;
     transform: translate3d(0,0,0);
 }
