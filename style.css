@@ -3,23 +3,21 @@
     padding: 0;
     box-sizing: 0;
     font-family: 'Times New Roman', Times, serif;
+    margin-right: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    width: 50%;
     align-items: center;
     color: rgb(42, 73, 140);
-    position: fixed;
+    
     background-color: white;
     width: 100%;
     margin: 0;
     z-index: 1;
 }
-header * {
-    position: relative;
-}
+
 
 header img {
     height: 70px;
@@ -63,7 +61,7 @@ header i:hover {
     display: none;
     list-style: none;
     position: absolute;
-    right: 25px;
+    right: 30px;
     top: 100px;
     text-align: center;
 }
@@ -111,13 +109,12 @@ main div {
     display: inline-block;
     padding: 10px;
     border-radius: 20px;
-    
 }
 main i {
     color: green;
-    font-size: 100px;
+    font-size: 80px;
     position: fixed;
-    right: 20px;
+    right: 30px;
     bottom: 20px;
     z-index: 1 ;
 }
@@ -193,7 +190,7 @@ footer  div a {
     text-decoration: none;
     font-size: 40px;
     color: rgb(42, 73, 140);
-    margin-right: 15px;
+    padding-right: 15px;
 }
 
 [data-animate] {
@@ -201,10 +198,11 @@ footer  div a {
     transition: 2s;
 }
 
-[data-animate="left"] {
+
+[data-animate="left"].stop {
     transform: translate3d(-50px, 0, 0);
 }
-[data-animate="right"] {
+[data-animate="right"].stop {
     transform: translate3d(50px, 0, 0);
 }
 [data-animate].animate {
@@ -217,10 +215,10 @@ footer  div a {
     transition: 2s;
 }
 
-[data-animate1="left"] {
+[data-animate1="left"].stop {
     transform: translate3d(-50px, 0, 0);
 }
-[data-animate1="right"] {
+[data-animate1="right"].stop {
     transform: translate3d(50px, 0, 0);
 }
 [data-animate1].animate {
@@ -233,7 +231,7 @@ footer  div a {
 
 @media (max-width: 700px) {
     #btnMenu{
-        margin-right: 30px;
+        padding-right: 30px;
         display: block;
     }
     #menu-desktop {

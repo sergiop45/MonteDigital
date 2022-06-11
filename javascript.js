@@ -6,7 +6,9 @@ function animeScroll(elements, distancia) {
     
     var windowTop = window.pageYOffset
     elements.forEach( element => {
+        element.classList.add('stop')
         if( (windowTop + distancia) > element.offsetTop ) {
+            
             element.classList.add(animateClass)
         } else {
             element.classList.remove(animateClass)
@@ -16,7 +18,7 @@ function animeScroll(elements, distancia) {
 
 window.addEventListener("scroll", () => {
      animeScroll(target, 400)
-     animeScroll(target1, 600)
+     animeScroll(target1, 400)
 })
 
 
