@@ -28,8 +28,8 @@ function animeScroll(elements, distancia) {
 window.addEventListener("scroll", () => {
     var windowTop = window.pageYOffset  
     console.log(windowTop)
-     animeScroll(target, 400)
-     animeScroll(target1, 400)
+     animeScroll(target, 500)
+     animeScroll(target1, 500)
 })
 
 
