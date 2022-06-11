@@ -11,8 +11,15 @@ header {
     padding: 0 10px;
     align-items: center;
     color: rgb(42, 73, 140);
-    
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
 }
+header * {
+    position: auto;
+}
+
 header img {
     height: 70px;
     border-radius: 50px;
@@ -21,7 +28,32 @@ header img {
     display: none;
     font-size: 40px;
     cursor: pointer;
+    padding-right: 15px;
     transition: 1s;
+}
+#btnWhats {
+    
+    margin-top: 50px;
+    background-color: green;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    display: inline-flex;
+    
+    border: 1px solid black;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+#btnWhats i {
+    margin-left: 20%;
+    margin-top: -3px;
+    margin-right: 8px;
+    font-size: 30px;
+    color: black;
+    position: initial;
 }
 header i:hover {
     transform: rotate(90deg);
@@ -30,7 +62,7 @@ header i:hover {
     display: none;
     list-style: none;
     position: absolute;
-    right: 5px;
+    right: 25px;
     top: 100px;
     text-align: center;
 }
@@ -66,9 +98,10 @@ main {
     background-image: url('img/banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 30%;
-    padding-bottom: 20%;
+    padding-top: 15%;
+    padding-bottom: 6%;
     padding-left: 5%;
+    text-align: center;
 }
 main div {
     font-size: 35px;
@@ -85,6 +118,114 @@ main i {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 1 ;
+}
+
+#mindset {
+    display: flex;
+    color: white;
+}
+.mindset-item {
+    padding: 60px 40px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#leads {
+    background-color: rgb(224,255,255);
+    padding: 50px 30px;
+}
+.lead {
+    opacity: 0;
+    animation: fadeIn 2s 1s both ;
+    background-color: white;
+    color: rgb(42, 73, 140);
+    padding: 10px 15px;
+    background-color: rgb(224,255,255);
+}
+.lead p {
+    font-size: 20px;
+    color: black;
+}
+.lead h2 {
+    text-align: start;
+    font-size: 30px;
+}
+.lead a {
+    text-decoration: none;
+    background-color: red;
+    border: 1px solid black;
+}
+
+
+.carrossel {
+    width: 95%;
+    margin: 0 auto;
+    text-align: start;
+}
+.carrossel h4 {
+    font-size: 30px;
+}
+.carrossel div {
+   height: auto;
+}
+.carrossel p {
+    font-size: 20px;
+}
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+}
+footer p {
+    font-size: 20px;
+    color: rgb(42, 73, 140);
+    padding-bottom: 30px;
+}
+footer  div a {
+    text-decoration: none;
+    font-size: 40px;
+    color: rgb(42, 73, 140);
+    margin-right: 15px;
+}
+
+[data-animate] {
+    opacity: 0;
+    transition: 2s;
+}
+
+[data-animate="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+[data-animate="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+[data-animate].animate {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+[data-animate1] {
+    opacity: 0;
+    transition: 2s;
+}
+
+[data-animate1="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+[data-animate1="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+[data-animate1].animate {
+    opacity: 1;
+    transform: translate3d(0,0,0);
 }
 
 
@@ -100,11 +241,19 @@ main i {
     }
 
     main a i {
-        position: initial;
+        
         float: right;
         margin-top: 15px;
         font-size: 50px;
         display: none;
     }
-
+    
+    #mindset {
+        flex-direction: column;
+    }
+    
+    main {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
 }
