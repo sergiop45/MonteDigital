@@ -17,17 +17,12 @@ function animeScroll(elements, distancia) {
             element.classList.add(animateClass)
         } 
         
-        else {
-            element.classList.remove(animateClass)
-            element.classList.remove(stopClass)
-        }
-
-    })
+    });
 }
 
 window.addEventListener("scroll", () => {
     var windowTop = window.pageYOffset  
-    console.log(windowTop)
+    
      animeScroll(target, 600)
      animeScroll(target1, 600)
 })
@@ -45,12 +40,12 @@ btnMenu.addEventListener("click", () => {
         menu.style = "display:block;"
         btnMenu.style = "transform: rotate(90deg);";
         x++
-        console.log(x)
+        
     } else {
         menu.style = "display:none;"
         btnMenu.style = "transform: rotate(0deg);";
         x--
-        console.log(x)
+        
     }
 })
 
@@ -84,9 +79,6 @@ var interval = 70;
     return true;
 }
 
-
-
-  
 
 showtext(el1,text, interval)
 showtext(el2,text2, interval)
