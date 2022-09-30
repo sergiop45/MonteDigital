@@ -54,9 +54,9 @@ let el1 = document.querySelector("#texto1")
 let el2= document.querySelector("#texto2")
 let el3 = document.querySelector("#texto3")
 let el4 = document.querySelector("#texto4")
-var text = "Gestão de Redes Sociais"
-var text2 = "Estrategias digitais" 
-var text3 = "Sites institucionais, Landing Pages e mais"
+var text2 = "Gestão de Redes Sociais"
+var text3 = "Tecnologias de Ponta e Profissionais qualificados" 
+var text = "Sites institucionais, Landing Pages, Blogs, Sistemas e mais"
 var text4 = "Consultoria Especializada para o seu Negocio"
 var interval = 70;
 

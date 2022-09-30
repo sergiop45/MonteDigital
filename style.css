@@ -169,6 +169,7 @@ main div {
 }
 .carrossel h4 {
     font-size: 30px;
+    text-align: center;
 }
 .carrossel div {
    height: auto;
