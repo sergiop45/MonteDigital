@@ -28,8 +28,8 @@ function animeScroll(elements, distancia) {
 window.addEventListener("scroll", () => {
     var windowTop = window.pageYOffset  
     console.log(windowTop)
-     animeScroll(target, 500)
-     animeScroll(target1, 500)
+     animeScroll(target, 600)
+     animeScroll(target1, 600)
 })
 
 
@@ -40,12 +40,15 @@ var menu = document.querySelector("#menu")
 var x = 0
 
 btnMenu.addEventListener("click", () => {
+    
     if( x == 0) {
         menu.style = "display:block;"
+        btnMenu.style = "transform: rotate(90deg);";
         x++
         console.log(x)
     } else {
         menu.style = "display:none;"
+        btnMenu.style = "transform: rotate(0deg);";
         x--
         console.log(x)
     }
@@ -56,13 +59,13 @@ let el1 = document.querySelector("#texto1")
 let el2= document.querySelector("#texto2")
 let el3 = document.querySelector("#texto3")
 let el4 = document.querySelector("#texto4")
-var text = "◉ Gestão de Redes Sociais"
-var text2 = "◉ Estrategias digitais" 
-var text3 = "◉ Sites institucionais, Landing Pages e mais"
-var text4 = "◉ Consultoria Especializada para o seu Negocio"
-var interval = 100;
+var text = "Gestão de Redes Sociais"
+var text2 = "Estrategias digitais" 
+var text3 = "Sites institucionais, Landing Pages e mais"
+var text4 = "Consultoria Especializada para o seu Negocio"
+var interval = 70;
 
- function showtext(el, text, interval, callback) {
+ async function showtext(el, text, interval) {
     
     var char = text.split("").reverse();
     
@@ -77,27 +80,18 @@ var interval = 100;
       el.innerHTML += next;
       
     }, interval);
-    callback()
-
+    
+    return true;
 }
 
 
 
   
 
- showtext(el1,text, interval,() => {
-
-    showtext(el2,text2, interval, () => {
-
-        showtext(el3,text3, interval,() => { 
-
-            showtext(  el4,text4, interval, console.log)
-        })
-    })
- })
-
-
-
+showtext(el1,text, interval)
+showtext(el2,text2, interval)
+showtext(el3,text3, interval)
+showtext(el4,text4, interval)
 
  
 
