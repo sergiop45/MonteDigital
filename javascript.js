@@ -17,6 +17,11 @@ function animeScroll(elements, distancia) {
             element.classList.add(animateClass)
         } 
         
+        else {
+            element.classList.remove(animateClass)
+            element.classList.remove(stopClass)
+        }
+        
     });
 }
 
@@ -24,7 +29,7 @@ window.addEventListener("scroll", () => {
     var windowTop = window.pageYOffset  
     
      animeScroll(target, 600)
-     animeScroll(target1, 600)
+     animeScroll(target1, 500)
 })
 
 
